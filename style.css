@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navigation-Bar */
+.nav-bar {
+    margin: 20px;
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    text-align: center;
+}
+
+.nav {
+    display: flex;
+    gap: 70px;
+    margin: 0 200px;
+}
+.nav .home {
+    border-bottom: #1295ff 3px solid;
+}
+.nav p {
+    font-size: 17px;
+}
+
+.login p {
+    color: #fff;
+    background-color: #1295ff;
+    width: 110px;
+    height: 45px;
+    padding-top: 12px;
+    border-radius: 5px;
+}
+
+/* Cover-Page */
+.cover {
+    /* background: url(img/coverjpg.jpg); */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)),url(img/coverjpg.jpg);
+    width: auto;
+    height: 550px;
+    background-size: cover;
+    color: #fff;
+    padding: 60px;
+}
+
+.cover h1 {
+    font-family: serif;
+    font-size: 65px;
+    width: 630px;
+    margin-bottom: 30px;
+}
+.cover .description {
+    width: 580px;
+    line-height: 30px;
+    margin-bottom: 60px;
+    text-shadow: 0 0 2px #000;
+}
+.cover .contact {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.cover .contact .contact-button {
+    background-color: #1295ff;
+    padding: 20px 25px;
+    border-radius: 5px;
+}
+.cover .choices {
+    margin-top: 30px;
+    margin-left: 200px;
+    display: flex;
+    gap: 3px;
+    color: #000;
+    width: 110px;
+    text-align: center;
+}
+.cover .choices p {
+    border: 1px #000 solid;
+    background-color: #fff;
+    padding: 12px 20px;
+    transition: 0.5s;
+}
+.cover .choices p:hover {
+    background-color: #1295ff;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Middle-Page */
+.middle {
+    margin: 80px 100px;
+    padding: 35px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #f5f0f0;
+    color: #6d6d6d;
+    align-items: center;
+    border-radius: 10px;
+}
+.middle p:hover {
+    cursor: pointer;
+}
+.search {
+    color: #fff;
+    background-color: #1295ff;
+    padding: 20px 40px;
+    transition: 0.25s;
+}
+.search:hover {
+    background-color: #32a1fb;
+    border-radius: 5px;
+}
+.search-icon {
+    font-size: 30px;
+}
+
+/* Features-Page */
+.feat {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 100px;
+}
+.feat .child {
+    background-color: #008cff12;
+    margin-right: 20px;
+    padding: 100px 0;
+    text-align: center;
+    line-height: 40px;
+    color: #0684e4;
+    border-radius: 5px;
+}
+.feat .child img {
+    width: 70px;
+    height: auto;
+    margin: 30px 0;
+}
+.feat .child p {
+    color: #000;
+}
+.feat .building {
+    border-bottom: #1295ff 5px solid;
+}
+
+/* Products-Page */
+.products {
+    text-align: center;
+}
+.products .title {
+    font-family: 'abril fatface';
+    font-weight: 100;
+    font-size: 50px;
+}
+.products p {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 10px;
+}
+
+.cards {
+    margin: 60px 0 0 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.cards .child{
+    width: 452px;
+    border: 2px #000 solid;
+    border-radius: 5px 5px 0 0;
+}
+.cards .child img {
+    width: 450px;
+    height: 250px;
+    border-radius: 5px 5px 0 0;
+}
+
+.cards .info{
+    margin: 10px 0 20px 20px;
+}
+.cards .purchase {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 230px;
+}
+.cards .purchase .purchase-button {
+    background-color: #1295ff;
+    color: #fff;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0 20px 20px;
+}
+
+footer {
+    margin: 50px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+/* Responsiveness */
+@media(max-width:860px) {
+    /* Navigation-Bar */
+    .nav {
+        display: none;
+    }
+    .nav-bar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .login {
+        margin-left: 150px;
+    }
+
+    /* Features-Page */
+.feat {
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+    /* Products-Page */
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 5px;
+    }
+    .cards .child {
+        width: 400px;
+    }
+    .cards .child img{
+        width: 400px;
+    }
+    .cards .purchase {
+        gap: 185px;
+    }
+}
+
+@media(max-width:700px) {
+    .cover {
+        width: 700px;
+    }
+    .login {
+        margin-left: 400px;
+    }
+    .middle {
+        margin: 30px 20px; 
+        width: 650px;
+    }
+    .feat .child{
+        margin-left: 10px;
+        width: 500px;
+    }
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
